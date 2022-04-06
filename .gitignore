@@ -2,6 +2,7 @@
 
 # dependencies
 /hola-mundo/node_modules
+/hola-hw1/node_modules
 /.pnp
 .pnp.js
 
