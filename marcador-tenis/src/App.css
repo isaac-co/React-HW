@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.container-buttons {
+  padding-left: 50px;
+}
+
+.container-puntos {
+  padding-left: 50px;
+}

@@ -3,6 +3,7 @@
 # dependencies
 /hola-mundo/node_modules
 /hw1/node_modules
+/marcador-tenis/node_modules
 /.pnp
 .pnp.js
 
