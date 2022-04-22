@@ -1,11 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/hola-mundo/node_modules
-/componente-basico/node_modules
-/hw1/node_modules
-/marcador-tenis/node_modules
-/task-list/node_modules
+/node_modules
 /.pnp
 .pnp.js
 
