@@ -32,6 +32,7 @@ const CapturaTarea = (props) => {
             name="texto"
             onChange={cambioEntradaHandler}/>
             <button className="tarea-boton" onClick={agregarTareaHandler}>Agregar tarea</button>
+            <button className="tarea-boton" onClick={() => props.onCancel()}>Cancelar</button>
         </form>
     );
  }

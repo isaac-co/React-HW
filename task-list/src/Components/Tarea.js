@@ -10,7 +10,8 @@ const Tarea = (props) => {
             <div className="tarea-texto" onClick={() => props.completarTarea(props.id)}>
                 {props.texto}
             </div>
-            <div className="tarea-contenedor-icono">
+            <div className="tarea-contenedor-icono"
+            onClick={() => props.eliminarTarea(props.id)}>
                 <MdDeleteForever/>
             </div>
         </div>
