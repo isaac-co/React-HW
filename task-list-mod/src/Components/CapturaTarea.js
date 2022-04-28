@@ -17,7 +17,6 @@ const CapturaTarea = (props) => {
     // Atiende el evento de cambio en el input (onChange)
     const cambioEntradaHandler = (event) => {
         setDescripcionTarea(event.target.value);
-        console.log(descripcionTarea);
     };
 
     // Atiende el click del boton (Agregar tarea)

@@ -3,10 +3,14 @@
 
 import "../styles/Tarea.css"
 import {TiDelete} from "react-icons/ti"
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { ContextoTarea } from "./ProvedorTareas";
 
 const Tarea = (props) => { 
+
+    useEffect(() => {
+        console.log("Dibujando una tarea (saludos desde Tarea)")
+    }, []);
 
     // Contexto
     const [, , completarTarea, eliminarTarea] = useContext(ContextoTarea)
