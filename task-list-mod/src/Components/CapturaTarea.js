@@ -1,46 +1,50 @@
 // Autor: Isaac Cortés
-// Forma para capturar una nueva Tarea
+// Forma para capturar una nueva tarea
+
 import { useContext, useState } from "react";
-import "../Styles/CapturaTarea.css"
-import {v4 as uuidv4} from 'uuid';
-import { ContextoTarea } from "./ListaTarea";
+import "../styles/CapturaTarea.css"
+import { v4 as uuidv4 } from 'uuid';
+import { ContextoTarea } from "./ProvedorTareas";
 
-const CapturaTarea = (props) => {
+const CapturaTarea = (props) => { 
 
-    const arrTareas = useContext(ContextoTarea)
-
-    // El valor del input, se guarda en el estado
+    //Contexto
+    const [, agregarTarea, ] = useContext(ContextoTarea);
+    
+    // El valor del input se guarda en el estado
     const [descripcionTarea, setDescripcionTarea] = useState("");
 
-    // Atiende el eveneto de cambio en el input (onChange)
+    // Atiende el evento de cambio en el input (onChange)
     const cambioEntradaHandler = (event) => {
         setDescripcionTarea(event.target.value);
+        console.log(descripcionTarea);
     };
 
-    // Atiende el click del botón (AgregarTarea)
+    // Atiende el click del boton (Agregar tarea)
     const agregarTareaHandler = (event) => {
-        event.preventDefault();
+        event.preventDefault()
         const tareaNueva = {
             id: uuidv4(),
             texto: descripcionTarea,
             completada: false
         };
-        props.onSubmit(tareaNueva); //
-        arrTareas.push(tareaNueva);
-        console.log(arrTareas);
-    }
+        agregarTarea(tareaNueva)
+        props.mostrarContenido();
+    };
 
     return (
         <form className="tarea-forma">
-            <input className="tarea.input" 
+            <input className="tarea-input" 
             type="text"
             placeholder="Escribe una nueva tarea"
-            name="texto"
-            onChange={cambioEntradaHandler}/>
-            <button className="tarea-boton" onClick={agregarTareaHandler}>Agregar tarea</button>
-            <button className="tarea-boton" onClick={() => props.onCancel()}>Cancelar</button>
+            name="texto" 
+            onChange={cambioEntradaHandler} />
+            <button className="tarea-boton" 
+            onClick={agregarTareaHandler}>Agregar tarea</button>
+            <button className="tarea-boton" 
+            onClick={() => props.mostrarContenido()}>Cancelar</button>
         </form>
     );
- }
+ };
 
- export default CapturaTarea;
+export default CapturaTarea;
