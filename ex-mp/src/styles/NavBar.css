@@ -1,0 +1,13 @@
+.nav-link {
+    margin-right: 1rem;
+    text-align: left;
+    color: whitesmoke;
+
+}
+
+.navbar {
+    background-color: rgb(53, 114, 228);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: right;
+}

@@ -1,0 +1,22 @@
+h1 {
+    text-align: center;
+}
+
+p {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+h2 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 5rem;
+}
+
+nav {
+    margin-left: 1rem;
+}
+
+.link {
+    color: blue;
+}
